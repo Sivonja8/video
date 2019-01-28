@@ -25,7 +25,7 @@ const prefix = "!";
 ////////////////////////
 client.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
-  bot.user.setActivity(".help | rujtex.eu", {type: "WATCHING"});
+  client.user.setActivity(".help | rujtex.eu", {type: "WATCHING"});
 
 });
 client.on('message', async msg =>{
