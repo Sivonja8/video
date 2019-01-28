@@ -291,16 +291,15 @@ function play(guild, song) {
 client.on('message', message => {
     if (message.content === 'help') {
         let helpEmbed = new Discord.RichEmbed()
-        .setTitle('**????? ???????...**')
-        .setDescription('**????? ????? (!)**')
-        .addField('play', 'Plays a song with the given name or url.')
+        .setTitle('**Rujtex Music Bot Commands !**')
+        .addField(":fire:" , 'play', 'Plays a song with the given name or url.')
         .addField('join', 'Summons the bot to your voice channel.')
-        .addField('disconnect', 'Disconnect the bot from the voice channel it is in')
-        .addField('skip', 'Skips the currently playing song')
-        .addField('pause', 'Pauses the currently playing track')
+        .addField('disconnect', 'Disconnect the bot from the voice channel it is in.')
+        .addField('skip', 'Skips the currently playing song.')
+        .addField('pause', 'Pauses the currently playing track.')
         .addField('resume', 'Resume paused music.')
-        .addField('queue', 'View the queue. To view different pages, type the command with the specified page number after it')
-        .addField('np', 'Shows what song the bot is currently playing')
+        .addField('queue', 'View the queue.')
+        .addField('np', 'Shows what song the bot is currently playing.')
         .setFooter('#Logaut')
 	.setColor("6f39e5")
       message.channel.send(helpEmbed);
