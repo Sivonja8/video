@@ -20,11 +20,11 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "!";
+const prefix = "-";
 /////////////////////////
 ////////////////////////
 client.on("ready", () => {
-    client.user.setActivity("help | rujtex.eu", { type: "WATCHING"})
+    client.user.setActivity("-help | rujtex.eu", { type: "WATCHING"})
 });
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
@@ -291,7 +291,7 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-    if (message.content === 'help') {
+    if (message.content === '-help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('Rujtex Music Bot Commands !')
         .addField(':tada: **play**', 'Plays a song with the given name or url.')
