@@ -293,14 +293,18 @@ client.on('message', message => {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
         .setDescription('**برفكس البوت (!)**')
-        .addField('play', 'لتشغيل اغنية')
-        .addField('join', 'دخول رومك الصوتي')
-        .addField('disconnect', 'الخروج من رومك الصوتي')
-        .addField('skip', 'تخطي الأغنية')
-        .addField('pause', 'ايقاف الاغنية مؤقتا')
-        .addField('resume', 'تكملة الاغنية')
-        .addField('queue', 'اظهار قائمة التشغيل')
-        .addField('np', 'اظهار الاغنية اللي انت مشغلها حاليا')
+        .addField('play', 'Plays a song with the given name or url.')
+        .addField('join', 'Summons the bot to your voice channel.')
+        .addField('disconnect', 'Disconnect the bot from the voice channel it is in.
+')
+        .addField('skip', 'Skips the currently playing song.')
+        .addField('pause', 'Pauses the currently playing track.
+')
+        .addField('resume', 'Resume paused music.')
+        .addField('queue', 'View the queue. To view different pages, type the command with the specified page number after it (queue 2).
+')
+        .addField('np', 'Shows what song the bot is currently playing.
+')
         .setFooter('#Logaut')
 	.setColor("6f39e5")
       message.channel.send(helpEmbed);
