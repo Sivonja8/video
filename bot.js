@@ -302,6 +302,7 @@ client.on('message', message => {
         .addField('queue', 'اظهار قائمة التشغيل')
         .addField('np', 'اظهار الاغنية اللي انت مشغلها حاليا')
         .setFooter('#Logaut')
+	.setColor("6f39e5")
       message.channel.send(helpEmbed);
     }
 });
