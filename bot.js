@@ -291,8 +291,8 @@ function play(guild, song) {
 client.on('message', message => {
     if (message.content === 'help') {
         let helpEmbed = new Discord.RichEmbed()
-        .setTitle('**Rujtex Music Bot Commands !**')
-        .addField(":fire:" , 'play', 'Plays a song with the given name or url.')
+        .setTitle('Rujtex Music Bot Commands !')
+        .addField('play', 'Plays a song with the given name or url.')
         .addField('join', 'Summons the bot to your voice channel.')
         .addField('disconnect', 'Disconnect the bot from the voice channel it is in.')
         .addField('skip', 'Skips the currently playing song.')
