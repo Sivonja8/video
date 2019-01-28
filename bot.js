@@ -23,10 +23,8 @@ const client = new Discord.Client({disableEveryone: true});
 const prefix = "!";
 /////////////////////////
 ////////////////////////
-client.on("ready", async () => {
-  console.log(`${bot.user.username} is online!`);
-  client.user.setActivity(".help | rujtex.eu", {type: "WATCHING"});
-
+client.on("ready", () => {
+    client.user.setActivity("my code", { type: "WATCHING"})
 });
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
