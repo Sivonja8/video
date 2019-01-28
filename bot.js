@@ -302,8 +302,8 @@ client.on('message', message => {
         .addField(':tada: **resume**', 'Resume paused music.')
         .addField(':tada: **queue**', 'View the queue.')
         .addField(':tada: **np**', 'Shows what song the bot is currently playing.')
-.set_footer(text='Just-Some-Bots/MusicBot ({})', icon_url='https://i.imgur.com/gFHBoZA.png')
-        .set_author(name=self.user.name, url='https://github.com/Just-Some-Bots/MusicBot', icon_url=self.user.avatar_url)
+.setfooter(text='Just-Some-Bots/MusicBot ({})', icon_url='https://i.imgur.com/gFHBoZA.png')
+        .setauthor(name=self.user.name, url='https://github.com/Just-Some-Bots/MusicBot', icon_url=self.user.avatar_url)
 //        .setFooter('#Logaut', message.author.displayAvatarURL)
 	.setColor("6f39e5")
       message.channel.send(helpEmbed);
