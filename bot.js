@@ -33,15 +33,7 @@ client.on('message', async msg =>{
 	let command = msg.content.toLowerCase().split(" ")[0];
 	command = command.slice(prefix.length)
 
-    if(command === `ping`) {
-    let embed = new Discord.RichEmbed()
-    .setColor(3447003)
-    .setTitle("Pong!!")
-    .setDescription(`${client.ping} ms,`)
-    .setFooter(`Requested by | ${msg.author.tag}`);
-    msg.delete().catch(O_o=>{})
-    msg.channel.send(embed);
-    }
+
 });
 /////////////////////////
 ////////////////////////
@@ -55,23 +47,7 @@ client.on('message', async msg =>{
 	let command = msg.content.toLowerCase().split(" ")[0];
 	command = command.slice(prefix.length)
 
-    if(command === `avatar`){
-	if(msg.channel.type === 'dm') return msg.channel.send("Nope Nope!! u can't use avatar command in DMs (:")
-        let mentions = msg.mentions.members.first()
-        if(!mentions) {
-          let sicon = msg.author.avatarURL
-          let embed = new Discord.RichEmbed()
-          .setImage(msg.author.avatarURL)
-          .setColor("#5074b3")
-          msg.channel.send({embed})
-        } else {
-          let sicon = mentions.user.avatarURL
-          let embed = new Discord.RichEmbed()
-          .setColor("#5074b3")
-          .setImage(sicon)
-          msg.channel.send({embed})
-        }
-    };
+
 });
 /////////////////////////
 ////////////////////////
@@ -315,17 +291,18 @@ function play(guild, song) {
 client.on('message', message => {
     if (message.content === 'help') {
         let helpEmbed = new Discord.RichEmbed()
-        .setTitle('**أوامر الميوزك...**')
-        .setDescription('**برفكس البوت (!)**')
-        .addField('play', 'لتشغيل اغنية')
-        .addField('join', 'دخول رومك الصوتي')
-        .addField('disconnect', 'الخروج من رومك الصوتي')
-        .addField('skip', 'تخطي الأغنية')
-        .addField('pause', 'ايقاف الاغنية مؤقتا')
-        .addField('resume', 'تكملة الاغنية')
-        .addField('queue', 'اظهار قائمة التشغيل')
-        .addField('np', 'اظهار الاغنية اللي انت مشغلها حاليا')
+        .setTitle('**????? ???????...**')
+        .setDescription('**????? ????? (!)**')
+        .addField('play', 'Plays a song with the given name or url.')
+        .addField('join', 'Summons the bot to your voice channel.')
+        .addField('disconnect', 'Disconnect the bot from the voice channel it is in')
+        .addField('skip', 'Skips the currently playing song')
+        .addField('pause', 'Pauses the currently playing track')
+        .addField('resume', 'Resume paused music.')
+        .addField('queue', 'View the queue. To view different pages, type the command with the specified page number after it')
+        .addField('np', 'Shows what song the bot is currently playing')
         .setFooter('#Logaut')
+	.setColor("6f39e5")
       message.channel.send(helpEmbed);
     }
 });
