@@ -25,7 +25,7 @@ const prefix = "-";
 ////////////////////////
 client.on("ready", () => {
     client.user.setActivity("-help | rujtex.eu", { type: "WATCHING"})
-	const channel = client.channels.get("mychannelid");
+	const channel = client.channels.get("531607941204410368");
   if (!channel) return console.error("The channel does not exist!");
   channel.join().then(connection => {
     // Yay, it worked!
