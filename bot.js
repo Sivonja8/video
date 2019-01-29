@@ -23,7 +23,9 @@ const client = new Discord.Client({disableEveryone: true});
 const prefix = "!";
 /////////////////////////
 ////////////////////////
-
+client.on("ready", () => {
+    client.user.setActivity("-help | rujtex.eu", { type: "WATCHING"})
+});
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
     if (!msg.content.startsWith(prefix)) return undefined;
